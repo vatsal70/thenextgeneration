@@ -847,7 +847,7 @@ video {
 }
 
 .h-\[1\.6rem\] {
-  height: 1.6rem;
+  height: 4rem;
 }
 
 .h-\[32px\] {
@@ -1484,7 +1484,7 @@ video {
 }
 
 .text-\[16px\] {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .text-25 {
@@ -2500,12 +2500,12 @@ li:hover .menu-sub:before {
 
 body:not(.is-mobile) .menu-sub-item:hover .menu-sub-item__link {
   --tw-bg-opacity: 1;
-  background-color: rgba(255, 238, 255, var(--tw-bg-opacity));
+  /* background-color: rgba(255, 238, 255, var(--tw-bg-opacity)); */
 }
 
 body:not(.is-mobile) .menu-sub-item .menu-sub-item__text {
   --tw-text-opacity: 1;
-  color: rgba(21, 21, 21, var(--tw-text-opacity));
+  /* color: rgba(21, 21, 21, var(--tw-text-opacity)); */
 }
 
 body:not(.is-mobile) .menu-sub-item .menu-sub-item__text:hover {
@@ -3291,7 +3291,7 @@ body:not(.is-mobile) .menu-sub-item:hover .menu-sub-item__image img {
   }
 
   .s\:h-\[2\.1rem\] {
-    height: 8.5rem;
+    height: 12rem;
   }
 
   .s\:h-\[2\.5rem\] {
@@ -3776,6 +3776,22 @@ body:not(.is-mobile) .menu-sub-item:hover .menu-sub-item__image img {
   }
 }
 
+.custom-margin {
+  margin-right: 0;
+}
+
+@media (max-width: 650px) {
+  .custom-margin {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 650px) {
+  .custom-margin {
+    margin-right: 20px;
+  }
+}
+
 .animated-gradient-bg {
   background: linear-gradient(135deg, #697ef0, #6779c8, #9da3c5);
   background-size: 400% 400%;
@@ -3801,5 +3817,43 @@ body:not(.is-mobile) .menu-sub-item:hover .menu-sub-item__image img {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+.menu-gradient-bg {
+  background: linear-gradient(135deg, #697ef0, #6779c8, #9da3c5);
+  background-size: 400% 400%;
+  animation: luxuryGradientShift 8s ease-in-out infinite;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+@keyframes luxuryGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.menu-color {
+  background-color: transparent;
+}
+
+@media (min-width: 650px) {
+  .menu-color {
+    background-color: rgb(2, 6, 59);
   }
 }
