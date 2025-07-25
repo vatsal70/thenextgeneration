@@ -20,8 +20,9 @@ body {
 }
 
 body {
-  font-family: "Cormorant Garamond", system-ui, -apple-system, "Segoe UI",
-    Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: "Yeseva One", "Cormorant Garamond", system-ui, -apple-system,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji";
 }
 
 hr {
@@ -264,8 +265,8 @@ code,
 kbd,
 pre,
 samp {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+  font-family: "Yeseva One", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 audio,
@@ -847,7 +848,7 @@ video {
 }
 
 .h-\[1\.6rem\] {
-  height: 1.6rem;
+  height: 4rem;
 }
 
 .h-\[32px\] {
@@ -1447,6 +1448,11 @@ video {
   font-family: Cormorant Garamond;
 }
 
+.font-menu {
+  font-family: "Yeseva One";
+  font-weight: 200;
+}
+
 .font-sans {
   font-family: suisse;
 }
@@ -1484,7 +1490,7 @@ video {
 }
 
 .text-\[16px\] {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .text-25 {
@@ -2228,16 +2234,16 @@ h3 {
 }
 
 .title-section {
-  font-family: Cormorant Garamond;
-  font-size: 2.3rem;
-  font-weight: 600;
+  font-family: Yeseva One;
+  font-size: 2rem;
+  font-weight: 300;
   line-height: 1.25;
   letter-spacing: -0.025em;
 }
 
 @media (min-width: 650px) {
   .title-section {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
 
@@ -2256,7 +2262,7 @@ h3 {
 }
 
 .label {
-  font-family: emoji;
+  font-family: "Yeseva One";
   font-size: 3.8rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -2498,12 +2504,12 @@ li:hover .menu-sub:before {
   transform: scaleY(1);
 }
 
-body:not(.is-mobile) .menu-sub-item:hover .menu-sub-item__link {
+body:not(.is-mobile) {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 238, 255, var(--tw-bg-opacity));
 }
 
-body:not(.is-mobile) .menu-sub-item .menu-sub-item__text {
+body:not(.is-mobile) {
   --tw-text-opacity: 1;
   color: rgba(21, 21, 21, var(--tw-text-opacity));
 }
@@ -3291,7 +3297,7 @@ body:not(.is-mobile) .menu-sub-item:hover .menu-sub-item__image img {
   }
 
   .s\:h-\[2\.1rem\] {
-    height: 8.5rem;
+    height: 12rem;
   }
 
   .s\:h-\[2\.5rem\] {
@@ -3671,7 +3677,7 @@ body:not(.is-mobile) .menu-sub-item:hover .menu-sub-item__image img {
   }
 
   .s\:text-16 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .s\:text-25 {
@@ -3683,7 +3689,7 @@ body:not(.is-mobile) .menu-sub-item:hover .menu-sub-item__image img {
   }
 
   .s\:text-40 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .s\:text-72 {
@@ -3776,6 +3782,22 @@ body:not(.is-mobile) .menu-sub-item:hover .menu-sub-item__image img {
   }
 }
 
+.custom-margin {
+  margin-right: 0;
+}
+
+@media (max-width: 650px) {
+  .custom-margin {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 650px) {
+  .custom-margin {
+    margin-right: 20px;
+  }
+}
+
 .animated-gradient-bg {
   background: linear-gradient(135deg, #697ef0, #6779c8, #9da3c5);
   background-size: 400% 400%;
@@ -3801,5 +3823,43 @@ body:not(.is-mobile) .menu-sub-item:hover .menu-sub-item__image img {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+.menu-gradient-bg {
+  background: linear-gradient(135deg, #697ef0, #6779c8, #9da3c5);
+  background-size: 400% 400%;
+  animation: luxuryGradientShift 8s ease-in-out infinite;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+@keyframes luxuryGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.menu-color {
+  background-color: transparent;
+}
+
+@media (min-width: 650px) {
+  .menu-color {
+    background-color: rgb(2, 6, 59);
   }
 }
